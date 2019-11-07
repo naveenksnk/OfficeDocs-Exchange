@@ -66,6 +66,11 @@ Since the anti-spam service is external, you need to create a mail flow rule (al
 
 ![Mail flow rule to prevent double-scanning](../media/TransportRuleFor3rdParty.png)
 
+Or 
+
+You can configure [Enhanced Filtering for Connectors in Exchange Online](https://docs.microsoft.com/en-us/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) which allows you to filter emails based on the actual source of messages that arrive over the inbound connector.
+
+
 ### Scenario 2 (unsupported) - MX record points to third-party solution without spam filtering
 
 I plan to use Exchange Online to host all my organization's mailboxes. All email that's sent to my domain from the internet must first flow through a third-party archiving or auditing service before arriving in Exchange Online. All outbound email that's sent from my Exchange Online organization to the internet must also flow through the service. However, the service doesn't provide a spam filtering solution.
